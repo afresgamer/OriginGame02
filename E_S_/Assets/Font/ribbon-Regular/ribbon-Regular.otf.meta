@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 135223b6a433369458227127b0cc5bbf
+timeCreated: 1496548998
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: ribbon
+  fontNames:
+  - ribbon
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
