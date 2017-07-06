@@ -7,17 +7,14 @@ public class Player : MonoBehaviour {
     Rigidbody2D rb2d;
     //SpriteRenderer sr;
     Transform AttachPoint;
-    [SerializeField]
-    private GameObject foam;
-    [SerializeField]
-    private float Timer = 1;
+    [SerializeField] private GameObject foam;
+    [SerializeField] private float Timer = 1;
     float Speed = 2;
     //Hp
     public static int P_Hp = 3;
     //Androidの入力変数
     float Move_Input_z;
-    [SerializeField]
-    private int Input_Move_interval = 3;
+    [SerializeField] private int Input_Move_interval = 3;
 
     //バウンドする回数
     public static int bound_count = 3;
@@ -89,12 +86,10 @@ public class Player : MonoBehaviour {
             }
         }
 
-        //移動
-#if UNITY_EDITOR
+        //移動 
         Vector3 v = new Vector3(x, 0, 0);
         rb2d.velocity = v;
 
-#endif
 #if  UNITY_ANDROID
         if (Input.gyro.enabled)
         {

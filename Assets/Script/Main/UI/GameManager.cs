@@ -52,11 +52,12 @@ public class GameManager : MonoBehaviour {
     //ゲームモードによってランク加算のコントロール
     public int Score_Rank(GameMode gm)
     {
-        if(gm == GameMode.EASY){ int point = (int)GameMode.EASY;　return point; }
-        else if(gm == GameMode.NORMAL){ int point = (int)GameMode.NORMAL; return point; }
-        else if(gm == GameMode.HARD) { int point = (int)GameMode.HARD; return point; }
+        int point = (int)GameMode.NONE;
+        if(gm == GameMode.EASY){ point = (int)GameMode.EASY; }
+        else if(gm == GameMode.NORMAL){ point = (int)GameMode.NORMAL;  }
+        else if(gm == GameMode.HARD) { point = (int)GameMode.HARD;  }
 
-        return (int)GameMode.EASY;
+        return point;
     }
 
     //ランク決定

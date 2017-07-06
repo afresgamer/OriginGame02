@@ -40,7 +40,7 @@ public class Death_UNI : MonoBehaviour {
         if (other.gameObject.tag == "Enemy/Fish")
         {
             Debug.Log("Fish is exit");
-            if (count > 3)
+            if (count > 2)
             {
                 Destroy(other.gameObject);
                 count = 0;

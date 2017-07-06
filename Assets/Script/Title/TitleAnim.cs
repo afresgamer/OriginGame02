@@ -4,16 +4,18 @@ using UnityEngine.SceneManagement;
 
 public class TitleAnim : MonoBehaviour {
 
-    //シーン移動用
-    private int SceneNum = 1;
     [SerializeField]
     private Button Start_B;
+    [SerializeField]
+    private Button Option_B;
     [SerializeField]
     private Button Easy;
     [SerializeField]
     private Button Normal;
     [SerializeField]
     private Button Hard;
+    [SerializeField]
+    private Image option;
     //GameManager確認用
     [SerializeField]
     private GameManager gameManager;
@@ -27,12 +29,33 @@ public class TitleAnim : MonoBehaviour {
         }
     }
 
+    void Start()
+    {
+        //Start_B.gameObject.SetActive(true);
+        //Option_B.gameObject.SetActive(true);
+        //Easy.gameObject.SetActive(false);
+        //Normal.gameObject.SetActive(false);
+        //Hard.gameObject.SetActive(false);
+        //option.gameObject.SetActive(false);
+    }
+
     public void Title_Anim_B()
     {
         Start_B.gameObject.SetActive(false);
+        Option_B.gameObject.SetActive(false);
         Easy.gameObject.SetActive(true);
         Normal.gameObject.SetActive(true);
         Hard.gameObject.SetActive(true);
+    }
+
+    public void Titie_Anim_B2()
+    {
+        Start_B.gameObject.SetActive(false);
+        Option_B.gameObject.SetActive(false);
+        Easy.gameObject.SetActive(false);
+        Normal.gameObject.SetActive(false);
+        Hard.gameObject.SetActive(false);
+        option.gameObject.SetActive(true);
     }
 
     public void ChangeGameMode(Button b)
@@ -44,9 +67,9 @@ public class TitleAnim : MonoBehaviour {
         Debug.Log(GameManager.gamemode);
     }
 
-    public void Scene_Change()
+    public void Scene_Change(int Scene)
     {
-        SceneManager.LoadScene(SceneNum);
+        SceneManager.LoadScene(Scene);
     }
 	
 }
